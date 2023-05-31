@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class GreetingController {
 	
+	//template e contador
 	private static final String template = "Hello, %s";
 	private static final AtomicLong counter= new AtomicLong();
+	
 	
 	@RequestMapping("/greeting")
 	public Greeting greeting(@RequestParam(value = "name", defaultValue = "world") String name) {
